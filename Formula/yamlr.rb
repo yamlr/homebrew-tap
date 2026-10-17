@@ -4,7 +4,7 @@
 # Homebrew Formula for Yamlr
 # Install via: brew install yamlr/tap/yamlr
 class Yamlr < Formula
-  desc "Autonomous Resolution Plane and Lossless Healing Engine for Kubernetes"
+  desc "Reconcile and repair Kubernetes configurations before deployment"
   homepage "https://yamlr.dev"
   version "0.1.0"
   # Yamlr is proprietary software; see the repository LICENSE for terms.
