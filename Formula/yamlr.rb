@@ -21,10 +21,7 @@ class Yamlr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://get.yamlr.dev/v#{version}/yamlr-linux-aarch64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
-    else
+    if Hardware::CPU.intel?
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-x86_64.tar.gz"
       sha256 "e342fe5cc5f49e2798df346515ac8b87f936cbccf3553b71821be12f818638b9"
     end
