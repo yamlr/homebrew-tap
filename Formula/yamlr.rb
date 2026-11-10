@@ -7,7 +7,6 @@ class Yamlr < Formula
   desc "Reconcile and repair Kubernetes configurations before deployment"
   homepage "https://yamlr.dev"
   version "0.1.0"
-  # Yamlr is proprietary software; see the repository LICENSE for terms.
   license :cannot_represent
 
   on_macos do
@@ -21,7 +20,10 @@ class Yamlr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
+    if Hardware::CPU.arm?
+      url "https://get.yamlr.dev/v#{version}/yamlr-linux-aarch64.tar.gz"
+      sha256 "194ab6af807d289c3b2692b1a19fbe15e9a71e4bdc1e0fab2631a195bd3ed72f"
+    else
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-x86_64.tar.gz"
       sha256 "2f5df6b3dd50531dc98845299c2c93326664bfdfcfc944e46c2b349e3a44541b"
     end
