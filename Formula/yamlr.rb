@@ -13,17 +13,17 @@ class Yamlr < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-aarch64.tar.gz"
-      sha256 "3a448021a262bbfd581a45064b527edd9768c5142c96d03a38bf0ace3bcf21a7"
+      sha256 "8ba56df5e06fb6093406a23611de4e92e7e2042ae11d76acce12deb13c1ac86c"
     else
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-x86_64.tar.gz"
-      sha256 "13a4058e2424354bb6d5090edaf56cc7697000036addb761064fb59abb8047ec"
+      sha256 "d1b494e3a12eada33cb1cc387f81edbb8fd026a5db418e430b3d78f1651c028a"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-x86_64.tar.gz"
-      sha256 "e342fe5cc5f49e2798df346515ac8b87f936cbccf3553b71821be12f818638b9"
+      sha256 "2f5df6b3dd50531dc98845299c2c93326664bfdfcfc944e46c2b349e3a44541b"
     end
   end
 
@@ -32,6 +32,6 @@ class Yamlr < Formula
   end
 
   test do
-    assert_match "Autonomous Resolution Plane", shell_output("#{bin}/yamlr --help")
+    assert_match "Configuration Resolution Plane", shell_output("#{bin}/yamlr --help")
   end
 end
