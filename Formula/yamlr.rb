@@ -12,20 +12,20 @@ class Yamlr < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-aarch64.tar.gz"
-      sha256 "8ba56df5e06fb6093406a23611de4e92e7e2042ae11d76acce12deb13c1ac86c"
+      sha256 "82bfd96d23721cc312a31a4ad2f2ae80abf3688d19a52460bcd953dfe793cd62"
     else
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-x86_64.tar.gz"
-      sha256 "d1b494e3a12eada33cb1cc387f81edbb8fd026a5db418e430b3d78f1651c028a"
+      sha256 "4b43e3770e417b3d22e2fe549da78f3b0636ff70a233da5cba0c69aeb063470c"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-aarch64.tar.gz"
-      sha256 "194ab6af807d289c3b2692b1a19fbe15e9a71e4bdc1e0fab2631a195bd3ed72f"
+      sha256 "d8d3d114aab9e267ff09eb876176af989b03786fd5543c057c76509a6fa79f39"
     else
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-x86_64.tar.gz"
-      sha256 "2f5df6b3dd50531dc98845299c2c93326664bfdfcfc944e46c2b349e3a44541b"
+      sha256 "42231860b97d32c84e535a82f5049079cc64c8cdf65f71f35483d5b3134199e6"
     end
   end
 
