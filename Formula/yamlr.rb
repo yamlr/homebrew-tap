@@ -6,26 +6,26 @@
 class Yamlr < Formula
   desc "Reconcile and repair Kubernetes configurations before deployment"
   homepage "https://yamlr.dev"
-  version "0.1.0"
+  version "0.1.2"
   license :cannot_represent
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-aarch64.tar.gz"
-      sha256 "82bfd96d23721cc312a31a4ad2f2ae80abf3688d19a52460bcd953dfe793cd62"
+      sha256 "65a026c71a0a1027c05ebd2dc86f749908808d94bd9ab1bc70494f7703120595"
     else
       url "https://get.yamlr.dev/v#{version}/yamlr-macos-x86_64.tar.gz"
-      sha256 "4b43e3770e417b3d22e2fe549da78f3b0636ff70a233da5cba0c69aeb063470c"
+      sha256 "2899685b68f838bd69d6e02c82ba6f13ad6a05106429e6b4f8509ff131de8c20"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-aarch64.tar.gz"
-      sha256 "d8d3d114aab9e267ff09eb876176af989b03786fd5543c057c76509a6fa79f39"
+      sha256 "fe01e71ed950882a33962b6b34b11bd56b2f8836012116454808452c0efbac19"
     else
       url "https://get.yamlr.dev/v#{version}/yamlr-linux-x86_64.tar.gz"
-      sha256 "42231860b97d32c84e535a82f5049079cc64c8cdf65f71f35483d5b3134199e6"
+      sha256 "e5f2268655f164c002c946d50ccdf62b72974be159e885ac013d70180e75045c"
     end
   end
 
